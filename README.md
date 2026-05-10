@@ -128,11 +128,4 @@ Odpowiedź zawiera:
 | `GET` | `/switches/{switch_id}` | Szczegóły włącznika |
 | `POST` | `/switches/{switch_id}/state` | Włączenie lub wyłączenie światła |
 | `GET` | `/switches/{switch_id}/stats` | Statystyki czasu działania oświetlenia |
-
-## Uwagi projektowe
-
-- Dane są przechowywane w pamięci procesu, aby projekt był prosty i czytelny.
-- Do produkcyjnej wersji należałoby dodać bazę danych, migracje, testy integracyjne i trwałe przechowywanie statystyk.
-- MQTT działa w trybie QoS 1, czyli broker powinien potwierdzić dostarczenie komunikatu do klienta.
-- FastAPI nie zapisuje nowego włącznika bez ACK z symulatora.
 - Zmiana stanu światła również oczekuje na potwierdzenie MQTT.
